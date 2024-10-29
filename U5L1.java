@@ -2,7 +2,7 @@
  * Debugging L1: Numbers
  */
 
-class Main {
+class U5L1 {
 
     public static void main(String[] args) {
        int num1 = 6;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class marks {
+public class U6L3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         

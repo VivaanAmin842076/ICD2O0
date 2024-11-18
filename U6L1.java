@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class U7L1 {
+class U6L1 {
  public static void main(String[] args) {
    Scanner sc = new Scanner(System.in);
    System.out.print("Please enter an integer: ");

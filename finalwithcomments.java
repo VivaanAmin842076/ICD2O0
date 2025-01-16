@@ -6,7 +6,14 @@ Title: Credit River Credit
 Description: A program which outputs a series of numbers based on the
 information on a given file and a series of mathematical calculations
 VARIABLE DICTIONARY: 
-
+ filePath: A string that holds the path to the ledger file.
+- customerCount: An integer that counts the number of customers processed.
+- totalBalance: A double that holds the total balance of all customers.
+- maxBalance: A double that holds the maximum balance found.
+- minBalance: A double that holds the minimum balance found.
+- maxAccount: A string that holds the account number with the highest balance.
+- minAccount: A string that holds the account number with the lowest balance.
+- finalBalance: A double that holds the calculated final balance for each customer.
 */
 
 package Creditrivercredit; // Package declaration
@@ -14,7 +21,7 @@ package Creditrivercredit; // Package declaration
 import java.util.Scanner; // Importing Scanner for input handling
 import java.io.File; // Importing File to read from a file
 
-public class Mfinalwithcomments { // Main class definition
+public class Creditrivercredit { // Main class definition
 
     // Basic function to calculate the final balance
     public static double calculateFinalBalance(double startingBalance, double purchase, double payment) {
@@ -36,12 +43,12 @@ public class Mfinalwithcomments { // Main class definition
         // File existence check and error message
         File ledgerFile = new File(filePath); // Create a File object for the ledger
         if (!ledgerFile.exists()) { // Check if the file exists
-            // Print error message if the file is not found
+                 // Print error message if the file is not found
             System.out.println("Error: The required file '" + filePath + "' was not found.");
             System.out.println("Note: This program requires no user input. Please ensure the file is in the correct path.");
-            return; // Exit the program if the file is not found
+            return; // Exit the program if the file is not found 
         }
-
+      
         // Try to read the file
         try (Scanner fileScanner = new Scanner(ledgerFile)) { // Create a Scanner to read the file
             // Reading each line (each customer's data)
